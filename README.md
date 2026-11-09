@@ -54,7 +54,7 @@ Download dataset (Kaggle) → Read data.yaml → Load pretrained YOLOv8s
 | mAP@50-95 | 0.849 |
 
 - *Before training:* the pretrained model could not recognize the drone, because "drone" is not a COCO class.
-- *After training:* (6 epochs, about 1 minute on a T4 GPU):** the model detects the drone with high confidence(0.90 on the test image).
+- *After training:* (6 epochs, about 1 minute on a T4 GPU): the model detects the drone with high confidence( 0.90 on the test image).
 
 ## Technologies Used
 - Python
