@@ -48,13 +48,13 @@ Download dataset (Kaggle) → Read data.yaml → Load pretrained YOLOv8s
 
 | Metric | Value |
 |--------|-------|
-| Precision | XX |
-| Recall | XX |
-| mAP@50 | XX |
-| mAP@50-95 | XX |
+| Precision | 0.992 |
+| Recall | 0.966 |
+| mAP@50 | 0.990 |
+| mAP@50-95 | 0.849 |
 
-- *Before training:* the model did not detect the drone and detected a "person" by mistake.
-- *After training:* the model detects the drone and draws a box around it with a confidence score.
+- *Before training:* the pretrained model could not recognize the drone, because "drone" is not a COCO class.
+- *After training:* (6 epochs, about 1 minute on a T4 GPU):** the model detects the drone with high confidence(0.90 on the test image).
 
 ## Technologies Used
 - Python
@@ -75,7 +75,7 @@ Download dataset (Kaggle) → Read data.yaml → Load pretrained YOLOv8s
 4. The trained model is saved as runs/detect/train/weights/best.pt.
 
 ## Future Improvements
-- Train for more epochs on a GPU to get higher accuracy.
+- Train for more epochs and test on more varied images to make the model more reliable.
 - Try bigger models such as YOLOv8m or YOLOv8l.
 - Add more drone types and harder images (night, far distance, birds in the sky) so the model learns to tell drones apart from birds.
 - Run the model on video and add tracking to follow drones from frame to frame.
