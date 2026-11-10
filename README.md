@@ -8,7 +8,7 @@ This project was built as part of the *Computer Vision for Developers* program a
 ## Problem Description
 Small drones are becoming very common, and they can fly over places where they are not allowed, such as airports, government buildings and private areas. Watching camera feeds manually is slow and easy to miss.
 
-A general object detection model (trained on COCO) does not know what a drone is. In our test, the pretrained model missed the drone completely and detected a "person" by mistake. Our goal is to train a model that can detect drones correctly and automatically.
+A general object detection model (trained on COCO) does not know what a drone is. In our test, the pretrained model detected the drone but labeled it as "bench", because "drone" is not one of the COCO classes it was trained on.In general, it cannot recognize drones correctly without extra training.
 
 ## Dataset & Model Used
 
@@ -53,7 +53,7 @@ Download dataset (Kaggle) → Read data.yaml → Load pretrained YOLOv8s
 | mAP@50 | 0.990 |
 | mAP@50-95 | 0.849 |
 
-- *Before training:* the pretrained model could not recognize the drone, because "drone" is not a COCO class.
+- *Before training:* the pretrained model labeled the drone as a "bench", because "drone" is not a COCO class.
 - *After training:* (6 epochs, about 1 minute on a T4 GPU): the model detects the drone with high confidence( 0.90 on the test image).
 
 ## Technologies Used
