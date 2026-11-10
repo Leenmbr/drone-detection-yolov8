@@ -79,7 +79,7 @@ Download dataset (Kaggle) → Read data.yaml → Load pretrained YOLOv8s
 - Try bigger models such as YOLOv8m or YOLOv8l.
 - Add more drone types and harder images (night, far distance, birds in the sky) so the model learns to tell drones apart from birds.
 - Run the model on video and add tracking to follow drones from frame to frame.
-- Deploy the model on a live camera for real-time detection.
+- Deploy the model by exporting it to **ONNX** format, a cross platform format that runs on Windows, Linux, Mobile devices and Web browsers, so it can be used in real applications such as a live camera system.
 
 ## SDAIA Academy
 - Program: Computer Vision for Developers – SDAIA Academy
