@@ -85,3 +85,8 @@ Download dataset (Kaggle) → Read data.yaml → Load pretrained YOLOv8s
 ## SDAIA Academy
 - Program: Computer Vision for Developers – SDAIA Academy
 - GitHub Repository: [SDAIA Academy](https://github.com/SDAIAAcademy)
+
+  ## Contributors
+  - Leen Almobrad
+  - Ghala Alotaibi [@Ghalaswe] (https://github.com/Ghalaswe)
+  - Jood Alharthi [@joudalharthi76] (https://github.com/joudalharthi76)
