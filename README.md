@@ -28,7 +28,7 @@ A general object detection model (trained on COCO) does not know what a drone is
 *Model*
 - *YOLOv8s* (small version) from Ultralytics
 - Pretrained on the COCO dataset, then fine-tuned on our drone images (transfer learning)
-
+- *Preprocessing & augmentation:* all images are resized to 640×640. During training, YOLO applies augmentation automatically (mosaic, blur, median blur, grayscale and CLAHE) to help the model generalize better.
 ## Workflow / Architecture
 
 
@@ -55,7 +55,8 @@ Download dataset (Kaggle) → Read data.yaml → Load pretrained YOLOv8s
 
 - *Before training:* the pretrained model labeled the drone as a "bench", because "drone" is not a COCO class.
 - *After training:* (6 epochs, about 1 minute on a T4 GPU): the model detects the drone with high confidence( 0.90 on the test image).
-
+- *Failure case:* when we first trained the model for only 2 epochs, it drew several extra wrong boxes around the drone (low-confidence false detections, such as 0.27 and 0.50). After training for 6 epochs, these mistakes were mostly reduced. This shows the model needs enough training to avoid false detections.
+- 
 ## Technologies Used
 - Python
 - Google Colab
